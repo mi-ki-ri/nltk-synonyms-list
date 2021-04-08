@@ -1,6 +1,6 @@
 from nltk.corpus import wordnet
 import sys
-from PyDictionary import PyDictionary
+from translate import Translator
 
 q = "cat"
 lang = "eng"
@@ -51,14 +51,36 @@ if len(synsets) > 0:
         engword = synsets[0].lemmas()[len(synsets[0].lemmas()) - 1].name()
 
 print("英語", engword)
-dictionary = PyDictionary(engword)
+
+translator = Translator(to_lang="jpn", from_lang="en")
+translation = translator.translate(engword)
+print("日本語", translation)
+
+translator = Translator(to_lang="fr", from_lang="en")
+translation = translator.translate(engword)
+print("フランス語", translation)
+
+translator = Translator(to_lang="de", from_lang="en")
+translation = translator.translate(engword)
+print("ドイツ語", translation)
+
+translator = Translator(to_lang="la", from_lang="en")
+translation = translator.translate(engword)
+print("ラテン語", translation)
+
+translator = Translator(to_lang="el", from_lang="en")
+translation = translator.translate(engword)
+print("ギリシャ語", translation)
 
 
-print("日本語", dictionary.translateTo('jpn'))
-print("フランス語", dictionary.translateTo('fr'))
-print("ドイツ語", dictionary.translateTo('de'))
-print("ラテン語", dictionary.translateTo('la'))
-print("ギリシャ語", dictionary.translateTo('el'))
-print("ロシア語", dictionary.translateTo('ru'))
-print("韓国語", dictionary.translateTo('ko'))
-print("中国語", dictionary.translateTo('zh'))
+translator = Translator(to_lang="ru", from_lang="en")
+translation = translator.translate(engword)
+print("ロシア語", translation)
+
+translator = Translator(to_lang="ko", from_lang="en")
+translation = translator.translate(engword)
+print("韓国語", translation)
+
+translator = Translator(to_lang="zh", from_lang="en")
+translation = translator.translate(engword)
+print("中国語", translation)
