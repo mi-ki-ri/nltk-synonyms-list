@@ -64,9 +64,9 @@ translator = Translator(to_lang="de", from_lang="en")
 translation = translator.translate(engword)
 print("ドイツ語", translation)
 
-translator = Translator(to_lang="la", from_lang="en")
-translation = translator.translate(engword)
-print("ラテン語", translation)
+# translator = Translator(to_lang="la", from_lang="en")
+# translation = translator.translate(engword)
+# print("ラテン語", translation)
 
 translator = Translator(to_lang="el", from_lang="en")
 translation = translator.translate(engword)
