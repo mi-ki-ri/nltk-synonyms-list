@@ -2,9 +2,12 @@
 
 ## installation
 
-- `pip install nltk`
+<!-- - `python3 -m venv venv`
+- `. ./venv/bin/activate` -->
+<!-- - `pip install nltk` or `pip install -U nltk` -->
+- `python3 -m pip install nltk`
 - `python init.py`
-- `pip install translate`
-- `python app.py {WORD} {LANG}`
-    - ex. `python app.py こんにちは jpn`
+- `python3 -m pip install translate`
+- `python3 app.py {WORD} {LANG}`
+    - ex. `python3 app.py こんにちは jpn`
 - translate library probably uses MyMemory API.
